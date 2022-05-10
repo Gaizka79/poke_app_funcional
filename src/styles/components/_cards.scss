@@ -1,0 +1,31 @@
+@import '../utils/variables.scss';
+
+.pokeCard {
+    border-style:double;
+    border-color: orangered;
+    width: 30%;
+    flex: 1 20%;
+    text-align: center;
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: $spacing-md;
+    & > img {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+}
+.pokeFoto {
+    width: 70%;
+    height: auto;
+    text-align: center;
+
+}
+.padrePokemon{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
