@@ -1,0 +1,12 @@
+@import '../utils/variables.scss';
+
+.imagen{
+    width: 50%;
+    height: auto;
+}
+.header{
+    display: flow-root;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+}
