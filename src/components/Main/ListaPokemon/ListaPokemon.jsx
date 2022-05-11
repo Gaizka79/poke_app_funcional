@@ -6,6 +6,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import { useContext } from "react";
 import { pokeContext } from "../../../context/pokeContext";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 //import uuid4 from "uuid4"; ---> solamente con importarlo, me da error.
 
 function ListaPokemon ()  {
@@ -29,7 +30,7 @@ function ListaPokemon ()  {
           const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${input}`);
           //const res = useAxios(`https://pokeapi.co/api/v2/pokemon/${input}`)
           const result = await res.data;
-          setPokemon([...pokemon,result]);
+          setPokemon([result, ...pokemon]);
           addPokemon(result);
         }catch(error) {
           if (error.code === 'ERR_BAD_REQUEST') {
@@ -67,3 +68,8 @@ export default ListaPokemon;
 //<label htmlFor="pokemon">Introduce un Pokemon: </label><br /><br />
 //<button onClick={()=> console.log(input)}>ver input</button>
 //<Button type="submit" variant='contained' color='primary'>Buscar Pokemon</Button>
+/*
+<label htmlFor="pokemon">Introduce un Pokemon: </label><br /><br />
+          <input type="text" name="pokemon" id='pokemon' />
+          <Button type="submit" variant='contained' color='primary'>Buscar Pokemon</Button>
+*/
