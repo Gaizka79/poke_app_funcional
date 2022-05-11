@@ -5,13 +5,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { pokeContext } from './context/pokeContext';
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
   const [pokems, setPokems] = useState([]);
 
   const addPokemon = (berria) => {
-    setPokems([...pokems, berria])
+    setPokems([berria, ...pokems])
   }
 
   const datuak = {
@@ -27,6 +28,7 @@ function App() {
             <Main/>
           </pokeContext.Provider>
         </BrowserRouter>
+        <Footer/>
     </div>
   );
 }
