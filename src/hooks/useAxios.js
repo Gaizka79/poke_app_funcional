@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 const useAxios = (url) => {
@@ -15,7 +15,7 @@ const useAxios = (url) => {
                 console.log(url);
                 const resp = await axios.get(url)
                 setResult(resp.data);
-                console.log("mierda");
+                
                 console.log(resp.data);
                 //result = resp.data;
                 console.log(result);
