@@ -13,6 +13,8 @@ function Card (props) {
           <img src={props.value.sprites.front_default} alt="Foto Pokemon" />{/*className="pokeFoto"/> */}
           <h4>{`Type 1: ${props.value.types[0].type.name}`}</h4>
           {props.value.types[1]? <h4>{`Type 2: ${props.value.types[1].type.name}`}</h4> : ""}
+          <h5>{`Pisua: ${(props.value.weight)/10}Kg.`}</h5>
+          <h5>{`Altuera: ${(props.value.height)/10}m.`}</h5>
         </div>
     )
   }

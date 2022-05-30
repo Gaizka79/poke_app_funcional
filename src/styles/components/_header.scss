@@ -1,12 +1,22 @@
 @import '../utils/variables.scss';
+//@import '../../assets/fondo_urdina.jpg';
 
-.imagen{
-    width: 50%;
+.pokeLogo{
+    width: 30%;
     height: auto;
 }
-.header{
+.pokeBall {
+    width: 10%;
+    height: auto;
+}
+header{
     display: flow-root;
     flex-direction: row;
     justify-content: center;
     align-items: end;
+    background-image: '../../assets/fondo_urdina.jpg';
+}
+.divHeader {
+    display: flex;
+    justify-content: space-evenly;
 }

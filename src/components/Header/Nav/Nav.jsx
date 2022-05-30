@@ -6,10 +6,10 @@ import Button from '@mui/material/Button'
 const Nav = () => {
   return (
     <nav className="nav">
-      <Button variant='contained' color='primary' href='/' className="nav_element">Home</Button>
-      <Button variant='contained' color='primary' href='/new' className="nav_element">Nuevo Pokemon</Button>
-      <Button variant='contained' color='primary' href='/pokemon/:id' className="nav_element">Detalles</Button>
-      <Button variant='contained' color='primary' href='/search' className="nav_element">Buscar</Button> 
+      <Button variant='contained' color='primary' href='/' className="nav_element">Hasiera</Button>
+      <Button variant='contained' color='primary' href='/new' className="nav_element">Sortu Pokemon berria</Button>
+      <Button variant='contained' color='primary' href='/pokemon/:id' className="nav_element">Xehetasunak</Button>
+      <Button variant='contained' color='primary' href='/search' className="nav_element">Bilaketa</Button> 
     </nav>
   )
 }
