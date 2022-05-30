@@ -6,10 +6,12 @@
     bottom: 0;
     position:fixed;
     width: 100%;
+    //background-image: '../../assets/fondo_urdina.jpg';
     //font-family: $font-family;
 }
 
 .footer{
     background-color: $background-color;
+    
     @include footer_style();
 }
