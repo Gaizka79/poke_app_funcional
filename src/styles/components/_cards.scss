@@ -1,5 +1,5 @@
 @import '../utils/variables.scss';
-
+/*
 .pokeCard {
     border-style:double;
     border-color: orangered;
@@ -17,14 +17,43 @@
         margin: auto;
         display: block;
     }
+}*/
+.pokeCard {
+    flex: 1 20%;
+    text-align: center;
+    flex-direction: column;
+    border-style:double;
+    border-radius: 0.5em;
+    max-width: 20%;
+    margin: 1em;
+    background-color: #99d98c;
+    box-shadow: 5px 5px 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+    background-color: wheat;
+    
 }
+.pokeFoto {
+    max-width: 90%;
+    height: 50%;
+    margin: 5%;
+    align-self: center;
+}
+/*
 .pokeFoto {
     width: 70%;
     height: auto;
     text-align: center;
 
 }
+
 .padrePokemon{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}*/
+.padrePokemon{
+    background-color: #ade8f4;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;

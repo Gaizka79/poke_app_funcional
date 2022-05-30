@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { pokeContext } from "../../../context/pokeContext";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-//import uuid4 from "uuid4"; ---> solamente con importarlo, me da error.
+import uuid4 from "uuid"; //---> solamente con importarlo, me da error.
 
 function ListaPokemon ()  {
 //const ListaPokemon = () => {
@@ -22,6 +22,9 @@ function ListaPokemon ()  {
       setInput(value.target.value.toLowerCase());
       value.target.value = "";
   },3000);
+
+  //const res = useAxios(`https://pokeapi.co/api/v2/pokemon/${input}`)
+  //const result =  res.data;
 
   useEffect(() => {
     if (input) {
@@ -52,8 +55,10 @@ function ListaPokemon ()  {
   return (
     <section className="listapokemon">
       <form onSubmit={handleSubmit} className='formPokemon'>
-        <TextField id='outlined-basic' type="text" onChange={(e) => 
-          debounced(e)} name="pokemon" placeholder="Nombre o número de Pokemon..." />
+      <label htmlFor="pokemon">Introduce un Pokemon: </label><br /><br />
+          <input type="text" name="pokemon" id='pokemon' />
+          <Button type="submit" variant='contained' color='primary'>Buscar Pokemon</Button>
+        
       </form>
       <div className="padrePokemon">
         {pokems === [] ? ""
@@ -69,6 +74,8 @@ export default ListaPokemon;
 //<button onClick={()=> console.log(input)}>ver input</button>
 //<Button type="submit" variant='contained' color='primary'>Buscar Pokemon</Button>
 /*
+<TextField id='outlined-basic' type="text" onChange={(e) => 
+          debounced(e)} name="pokemon" placeholder="Nombre o número de Pokemon..." />
 <label htmlFor="pokemon">Introduce un Pokemon: </label><br /><br />
           <input type="text" name="pokemon" id='pokemon' />
           <Button type="submit" variant='contained' color='primary'>Buscar Pokemon</Button>
