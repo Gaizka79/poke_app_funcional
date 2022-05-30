@@ -55,9 +55,11 @@ function ListaPokemon ()  {
   return (
     <section className="listapokemon">
       <form onSubmit={handleSubmit} className='formPokemon'>
+
       <label htmlFor="pokemon"></label><br /><br />
           <input type="text" name="pokemon" id='pokemon' placeholder="Sartu Pokemonen izena..." />
           <Button type="submit" variant='contained' color='primary'>Aurki ezazu!!</Button>
+
         
       </form>
       <div className="padrePokemon">
