@@ -9,7 +9,7 @@ const Nav = () => {
       <Button variant='contained' color='primary' href='/' className="nav_element">Hasiera</Button>
       <Button variant='contained' color='primary' href='/new' className="nav_element">Sortu Pokemon berria</Button>
       <Button variant='contained' color='primary' href='/pokemon/:id' className="nav_element">Xehetasunak</Button>
-      <Button variant='contained' color='primary' href='/search' className="nav_element">Bilaketa</Button> 
+      <Button variant='contained' color='primary' href='/search' className="nav_element">Bilaketa</Button>
     </nav>
   )
 }
